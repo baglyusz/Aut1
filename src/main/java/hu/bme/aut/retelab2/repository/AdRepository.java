@@ -28,4 +28,9 @@ public class AdRepository {
     public List<Ad> findByKeyword(String keyword) {
         return em.createQuery("SELECT n FROM Ad n WHERE n.address LIKE ?1", Ad.class).setParameter(1, '%' + keyword + '%').getResultList();
     }
+
+    public List<Ad> findPriceMinMax(int value1,int value2){
+        List<Ad> query = em.createQuery("SELECT a FROM Ad a WHERE a.price >= :value1 AND a.price <= :value2 ",Ad.class).setParameter("value1",value1).setParameter("value2",value2).getResultList();
+        return query;
+    }
 }

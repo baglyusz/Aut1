@@ -24,4 +24,19 @@ public class Ad {
 
     public void setId(Long id) { this.id = id; }
 
+    public String getAddress(){ return address; }
+
+    public void setAddress(String address){ this.address = address; }
+
+    public String getDescription(){ return description; }
+
+    public void setDescription(String description){ this.description = description; }
+
+    public int getPrice() { return price; }
+
+    public void setPrice(int price){ this.price = price; }
+
+    public Date getCreatedAt() { return created; }
+
+    public void setCreatedAt(Date createdAt){ this.created = createdAt; }
 }
